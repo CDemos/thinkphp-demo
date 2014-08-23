@@ -3,9 +3,9 @@ namespace Admin\Controller;
 use Think\Controller;
 
 class IndexController extends Controller {
-
-    public function index() {
-        echo "admin index ";
+    // Action参数绑定上一页下一页
+    public function index($username = "Anonymous") {
+        echo "Welcome " . $username . " to Admin Index Page";
     }
     
     // 前置和后置操作的注意事项如下：
@@ -26,5 +26,17 @@ class IndexController extends Controller {
     // 后置操作方法
     public function _after_valid() {
         echo 'after<br/>';
+    }
+    
+    //输入变量    过滤变量
+    public function email(){
+        //http://localhost/thinkphp-demo/index.php/admin/index/email/e/tonjayin@g.com
+        $email = I('get.e','','email');
+        echo $email;
+        if($email){
+            echo "  is ok";
+        }else{
+            echo "  is not correct!";
+        }
     }
 }
