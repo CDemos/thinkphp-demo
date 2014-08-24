@@ -39,4 +39,41 @@ class IndexController extends Controller {
             echo "  is not correct!";
         }
     }
+
+    public function get_admin(){
+          $Admin  = M('admin');
+          $Admin->select();
+
+    }
+
+    
+    public function add_admin(){
+
+
+        $Admin  = M('admin');
+        $data = array(
+                'name' => 'admin'.time()
+                ,'psw' => time()
+            );
+        // echo $Admin->data($data)->add();
+        var_dump($Admin->create());
+        $Admin->add();
+    }
+
+    public function say_hi(){
+        $this->display('index');
+    }
+
+
+    public function log($msg=''){
+        if(!empty($msg)){
+            echo "not empty".'<br/>';
+            \Think\Log::write($msg,'INFO');
+        }
+        echo C('LOG_RECORD').'<br/>';
+        echo C('LOG_RECORD_LEVEL').'<br/>';
+        echo C('LOG_LEVEL').'<br/>';
+        echo 'Log-->'.$msg;
+    }
+
 }
