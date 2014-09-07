@@ -16,3 +16,5 @@
 但是我试了是不行，因为压根没有加载那个`common.php`文件
 在`/Conf/config.php`加入这么一行配置：`'LOAD_EXT_FILE' => 'common'` 即可
 
+**NOTE:** 无法重复定义函数
+
