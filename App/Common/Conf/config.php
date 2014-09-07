@@ -6,5 +6,8 @@ return array(
         'DB_USER' => 'root', // 用户名
         'DB_PWD' => '', // 密码
         'DB_PORT' => '3306', // 端口
-        'DB_PREFIX' => 'tp_' // 数据库表前缀
+        'DB_PREFIX' => 'tp_' ,// 数据库表前缀
+        'SHOW_PAGE_TRACE' =>true // 显示页面Trace信息
+
+        ,'LOAD_EXT_FILE' => 'common,cool'
 );

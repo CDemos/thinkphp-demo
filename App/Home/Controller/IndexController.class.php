@@ -12,4 +12,6 @@ class IndexController extends Controller {
         $a = M();
         $a->query();
     }
+
+ 
 }

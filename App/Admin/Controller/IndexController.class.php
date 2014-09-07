@@ -76,4 +76,9 @@ class IndexController extends Controller {
         echo 'Log-->'.$msg;
     }
 
+    public function say(){
+        say_hi('Jayin');
+        go();
+    }
+
 }
