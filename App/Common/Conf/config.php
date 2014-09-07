@@ -9,5 +9,8 @@ return array(
         'DB_PREFIX' => 'tp_' ,// 数据库表前缀
         'SHOW_PAGE_TRACE' =>true // 显示页面Trace信息
 
-        ,'LOAD_EXT_FILE' => 'common,cool'
+        ,'LOAD_EXT_FILE' => 'common'//自定义加载函数文件
+        ,'AUTOLOAD_NAMESPACE' =>array(
+    		 'Lib'     => APP_PATH.'Lib',
+		)
 );

@@ -75,10 +75,23 @@ class IndexController extends Controller {
         echo C('LOG_LEVEL').'<br/>';
         echo 'Log-->'.$msg;
     }
-
+    //测试调用公共函数
     public function say(){
-        say_hi('Jayin');
+        say_hi1('Jayin');
         go();
+    }
+
+    public function test_auto_load(){
+        if(empty(C('AUTOLOAD_NAMESPACE'))){
+            echo "emtpy";
+        }else{
+            var_dump(C('AUTOLOAD_NAMESPACE')) ;
+        }
+        // import('Lib.Common.Utils.Utils');
+
+        $obj = new \Lib\Common\Utils\Utils();
+        $obj->test();
+
     }
 
 }
