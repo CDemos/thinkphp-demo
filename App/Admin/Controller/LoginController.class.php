@@ -24,4 +24,8 @@ class LoginController extends Controller{
 			session('userid',null);
 		}
 	}
+	
+	public function tpl(){
+	    $this->display();
+	}
 }

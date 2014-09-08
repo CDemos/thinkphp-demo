@@ -91,7 +91,11 @@ class IndexController extends Controller {
 
         $obj = new \Lib\Common\Utils\Utils();
         $obj->test();
-
+    }
+    
+    public function test_public_model(){
+        $filter = D('Filter');
+        $filter->say();
     }
 
 }
