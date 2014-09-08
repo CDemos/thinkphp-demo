@@ -26,6 +26,7 @@ class LoginController extends Controller{
 	}
 	
 	public function tpl(){
-	    $this->display();
+	    //template -> /App/Admin/View/Login/tpl.html
+// 	    $this->display();
 	}
 }
